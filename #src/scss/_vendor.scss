@@ -1,0 +1,118 @@
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e1e1e1;
+  border: 0px none #ffffff;
+  border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ffffff;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: #000000;
+}
+
+::-webkit-scrollbar-track {
+  background: #666666;
+  border: 0px none #ffffff;
+  border-radius: 0px;
+}
+
+::-webkit-scrollbar-track:hover {
+  background: #666666;
+}
+
+::-webkit-scrollbar-track:active {
+  background: #737373;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: none;
+  overflow: auto;
+  background-color: #000000;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 9999;
+  transition: 0.5s all ease;
+}
+
+.modal-window {
+  position: relative;
+  background-color: #FFFFFF;
+  width: 50%;
+  margin: 10% auto;
+  padding: 20px;
+
+  @media screen and (max-width: $medium) {
+    padding: 30px 10px;
+  }
+}
+
+.modal-window.small {
+  width: 30%;
+}
+
+.modal-window.large {
+  width: 75%;
+}
+
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #fff;
+  height: 30px;
+  width: 30px;
+  font-size: 30px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.close:hover,
+.close:focus {
+  color: #ccc;
+  cursor: pointer;
+}
+
+.open {
+  display: block;
+  animation-name: fadeIn;
+  animation-duration: 0.5s;
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {}
+
+.swiper-container-v {}

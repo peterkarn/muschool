@@ -1,0 +1,15 @@
+$maxWidth: 1440;
+
+@mixin adaptive-font($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $maxWidth: $maxWidth - 375;
+  font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 375px) / #{$maxWidth}));
+}
+
+// если используем сетку лаврика - проверь, совпадают ли брейкпоинты и переменные
+$large: 1200px;
+$medium: 1024px;
+$small: 768px;
+$xsmall: 576px;
+
+$primary: #f0f0f0;
