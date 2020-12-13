@@ -8,6 +8,19 @@
    const tabs = document.querySelector('.tabs');
    const tabsBtn = document.querySelectorAll('.tabs__item');
    const tabsContent = document.querySelectorAll('.tabs__content');
+   const tabsList = document.querySelector('.tabs__list');
+
+   tabsList.addEventListener('scroll', function () {
+     if (tabsList.scrollLeft < 30) {
+       if (!document.querySelector('.tabs__item_1').classList.contains('tabs__item_active')) {
+         document.querySelector('.tabs__item_1').click();
+       }
+     } else if (tabsList.scrollLeft >= 60 && tabsList.scrollLeft < 200) {
+       document.querySelector('.tabs__item_2').click();
+     } else if (tabsList.scrollLeft >= 200) {
+       document.querySelector('.tabs__item_3').click();
+     }
+   });
 
    if (tabs) {
      tabsBtn.forEach((element) => {
@@ -31,38 +44,16 @@
    };
  });
 
- //slider
 
- // const mySwiper = new Swiper('.shops__container', {
- //   direction: 'vertical',
- //   loop: true,
- //   navigation: {
- //     nextEl: '.shops__next',
- //     prevEl: '.shops__prev',
- //   },
- // effect: 'coverflow',
- // coverflowEffect: {
- //   rotate: 30,
- //   slideShadows: true,
- //   stretch: 300,
- // },
- // });
-
- // const mySwiperShops = new Swiper('.shops__body', {
- //   direction: 'horizontal',
- //   loop: true,
- //   navigation: {
- //     nextEl: '.text-shops__btn',
- //   }
- // });
-
- var swiperH = new Swiper('.swiper-container-h', {
+ const swiperH = new Swiper('.swiper-container-h', {
    spaceBetween: 50,
+   loop: true,
+   touchRatio: 0,
    navigation: {
      nextEl: '.text-shops__btn',
    }
  });
- var swiperV = new Swiper('.swiper-container-v', {
+ const swiperV = new Swiper('.swiper-container-v', {
    loop: true,
    direction: 'vertical',
    touchRatio: 0,

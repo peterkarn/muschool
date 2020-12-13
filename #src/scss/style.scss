@@ -156,6 +156,7 @@
 
   &.blur {
     filter: blur(10px);
+    transform: scale(1.03);
   }
 }
 
@@ -534,7 +535,7 @@
     position: relative;
     justify-content: start;
     padding-left: 30px;
-    min-width: 264px;
+    min-width: 200px;
     min-height: 45px;
     background-position: 50% 50%;
     background-repeat: no-repeat;
@@ -563,6 +564,16 @@
     }
 
   }
+
+  &__btn_back {
+    align-self: flex-end;
+    margin-left: auto;
+    min-width: 150px;
+
+    @media screen and (max-width: $xsmall) {
+      margin-right: auto;
+    }
+  }
 }
 
 .text-shops__all {
@@ -574,7 +585,24 @@
   }
 
   .text-shops__links {
-    margin-right: 20px;
+    flex: 0 0 300px;
+    padding: 0 10px;
+
+    @media screen and (max-width: $small) {
+      flex: 0 1 300px;
+      margin-bottom: 10px;
+    }
+  }
+
+  @media screen and (max-width: $xsmall) {
+    .text-shops__link {
+      margin-bottom: 10px;
+      font-size: 12px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
   }
 }
 
@@ -736,7 +764,12 @@
   }
 
   &__col {
-    flex: 1 1 50%;
+    flex: 1 1 60%;
+    margin-right: 20px;
+
+    &:last-child {
+      margin-right: 0;
+    }
 
     @media screen and (max-width: $xsmall - 1) {
       margin-bottom: 48px;
@@ -745,6 +778,10 @@
 
   &__img {
     flex: 0 0 53%;
+
+    @media screen and (max-width: $large) {
+      flex: 0 0 45%;
+    }
 
     @media screen and (max-width: 880px) {
       min-height: auto;
@@ -760,6 +797,8 @@
   }
 
   &__footer {
+    position: relative;
+    z-index: 10;
     display: flex;
     align-items: center;
     width: 100%;
@@ -1063,6 +1102,10 @@
   &__caption {
     margin-bottom: 50px;
     text-align: center;
+
+    @media screen and (max-width: $xsmall) {
+      text-align: right;
+    }
   }
 }
 
@@ -1249,7 +1292,7 @@
     @media screen and (max-width: $medium) {
       width: 88px;
       height: 88px;
-      background-position: -100px 50%;
+      background-position: 5px 50%;
       background-size: 120%;
     }
 
@@ -1264,8 +1307,9 @@
     }
 
     &_facebook {
-      background: #000 url("../img/icons/fb-logo-vk.png") 19px 0;
+      background: #000 url("../img/icons/fb-logo-vk.png") 10% 50%;
       background-repeat: no-repeat;
+
     }
 
     &_youtube {

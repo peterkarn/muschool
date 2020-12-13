@@ -96,6 +96,7 @@
   display: block;
   animation-name: fadeIn;
   animation-duration: 0.5s;
+  overflow-x: hidden;
 
   @keyframes fadeIn {
     0% {

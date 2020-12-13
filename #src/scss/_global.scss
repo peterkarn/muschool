@@ -19,7 +19,7 @@ body {
 
 .body.locked {
   overflow: hidden;
-
+  overflow-y: visible !important;
 }
 
 .main.blur {
