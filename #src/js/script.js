@@ -4,45 +4,45 @@
 
  //tabs
 
- document.addEventListener('DOMContentLoaded', () => {
-   const tabs = document.querySelector('.tabs');
-   const tabsBtn = document.querySelectorAll('.tabs__item');
-   const tabsContent = document.querySelectorAll('.tabs__content');
-   const tabsList = document.querySelector('.tabs__list');
+ //  document.addEventListener('DOMContentLoaded', () => {
+ //    const tabs = document.querySelector('.tabs');
+ //    const tabsBtn = document.querySelectorAll('.tabs__item');
+ //    const tabsContent = document.querySelectorAll('.tabs__content');
+ //    const tabsList = document.querySelector('.tabs__list');
 
-   tabsList.addEventListener('scroll', function () {
-     if (tabsList.scrollLeft < 30) {
-       if (!document.querySelector('.tabs__item_1').classList.contains('tabs__item_active')) {
-         document.querySelector('.tabs__item_1').click();
-       }
-     } else if (tabsList.scrollLeft >= 60 && tabsList.scrollLeft < 200) {
-       document.querySelector('.tabs__item_2').click();
-     } else if (tabsList.scrollLeft >= 200) {
-       document.querySelector('.tabs__item_3').click();
-     }
-   });
+ //    tabsList.addEventListener('scroll', function () {
+ //      if (tabsList.scrollLeft < 30) {
+ //        if (!document.querySelector('.tabs__item_1').classList.contains('tabs__item_active')) {
+ //          document.querySelector('.tabs__item_1').click();
+ //        }
+ //      } else if (tabsList.scrollLeft >= 60 && tabsList.scrollLeft < 200) {
+ //        document.querySelector('.tabs__item_2').click();
+ //      } else if (tabsList.scrollLeft >= 200) {
+ //        document.querySelector('.tabs__item_3').click();
+ //      }
+ //    });
 
-   if (tabs) {
-     tabsBtn.forEach((element) => {
-       element.addEventListener('click', function () {
-         const tabsPath = element.dataset.tabsPath;
-         tabsHandler(tabsPath);
-       });
-     });
+ //    if (tabs) {
+ //      tabsBtn.forEach((element) => {
+ //        element.addEventListener('click', function () {
+ //          const tabsPath = element.dataset.tabsPath;
+ //          tabsHandler(tabsPath);
+ //        });
+ //      });
 
-   }
-   const tabsHandler = (path) => {
-     tabsBtn.forEach(el => {
-       el.classList.remove('tabs__item_active')
-     });
-     document.querySelector(`[data-tabs-path="${path}"]`).classList.add('tabs__item_active');
+ //    }
+ //    const tabsHandler = (path) => {
+ //      tabsBtn.forEach(el => {
+ //        el.classList.remove('tabs__item_active')
+ //      });
+ //      document.querySelector(`[data-tabs-path="${path}"]`).classList.add('tabs__item_active');
 
-     tabsContent.forEach(el => {
-       el.classList.remove('tabs__content_active', 'fade-in-top')
-     });
-     document.querySelector(`[data-tabs-target="${path}"]`).classList.add('tabs__content_active', 'fade-in-top');
-   };
- });
+ //      tabsContent.forEach(el => {
+ //        el.classList.remove('tabs__content_active', 'fade-in-top')
+ //      });
+ //      document.querySelector(`[data-tabs-target="${path}"]`).classList.add('tabs__content_active', 'fade-in-top');
+ //    };
+ //  });
 
 
  const swiperH = new Swiper('.swiper-container-h', {
@@ -65,6 +65,40 @@
      prevEl: '.shops__prev',
    },
  });
+
+ var swiperFormatsTop = new Swiper('.formats__slider-top', {
+   spaceBetween: 0,
+   centeredSlides: true,
+   slidesPerView: 'auto',
+   touchRatio: 1,
+   slideToClickedSlide: true,
+   loop: false,
+   loopedSlides: 1,
+   slidesPerView: 3,
+   breakpoints: {
+     320: {
+       slidesPerView: 1.5,
+     },
+     768: {
+       slidesPerView: 2.8,
+       spaceBetween: 20
+     },
+     1024: {
+       slidesPerView: 4.5,
+       spaceBetween: 20
+     }
+   }
+ });
+ var swiperFormatsBottom = new Swiper('.formats__slider-bottom', {
+   spaceBetween: 10,
+   loop: false,
+   loopedSlides: 1,
+   slidesPerView: 1,
+ });
+ swiperFormatsTop.controller.control = swiperFormatsBottom;
+ swiperFormatsBottom.controller.control = swiperFormatsTop;
+
+
 
  //accordion
 
@@ -162,16 +196,6 @@
    }
  }, '.thanks-popup', 'send goal');
 
- //  document.querySelectorAll('.form__btn').forEach((element) => {
- //    element.addEventListener('click', function (e) {
- //      e.preventDefault();
- //      validateForms('.form', {
- //        tel: {
- //          required: true
- //        }
- //      }, '.thanks-popup', 'send goal');
- //    });
- //  });
 
  // button info into the form
 

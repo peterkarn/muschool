@@ -172,7 +172,7 @@
       </div>
     </section>
     <section class="formats page-section">
-      <div class="container">
+      <div class="container formats__container">
         <div class="section-caption formats__caption">
           <h2 class="section-caption__title gradient-text">
             Форматы франшизы
@@ -181,9 +181,11 @@
             Выбери подходящий формат для успешного стартa
           </p>
         </div>
-        <div class="tabs">
-          <ul class="tabs__list" data-simplebar>
-            <li class="tabs__item tabs__item_1 tabs__item_active" data-tabs-path="standart">
+        <div class="swiper-container formats__slider-top">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper formats__slider-top-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide formats__slider-top-slide">
               <div class="item">
                 <h3 class="item__title">
                   Standart
@@ -197,8 +199,8 @@
                   </div>
                 </div>
               </div>
-            </li>
-            <li class="tabs__item tabs__item_2" data-tabs-path="medium">
+            </div>
+            <div class="swiper-slide formats__slider-top-slide">
               <div class="item">
                 <h3 class="item__title">
                   Medium
@@ -212,8 +214,8 @@
                   </div>
                 </div>
               </div>
-            </li>
-            <li class="tabs__item tabs__item_3" data-tabs-path="large">
+            </div>
+            <div class="swiper-slide formats__slider-top-slide">
               <div class="item">
                 <h3 class="item__title">
                   Large
@@ -227,265 +229,271 @@
                   </div>
                 </div>
               </div>
-            </li>
-          </ul>
-          <div class="tabs__content tabs__content_active" data-tabs-target="standart">
-            <div class="content">
-              <div class="content__body">
-                <div class="content__text">
-                  <div class="content__col">
-                    <div class="content__fee fee">
-                      <p class="fee__sup">
-                        Стоимость франшизы
-                      </p>
-                      <p class="fee__price rub">
-                        250 000
-                      </p>
-                    </div>
-                    <div class="content__fee fee">
-                      <p class="fee__sup">
-                        Ремонт
-                      </p>
-                      <p class="fee__price rub">
-                        до 300 000
-                      </p>
-                    </div>
-                    <div class="content__fee fee">
-                      <p class="fee__sup">
-                        Товарное наполнение
-                      </p>
-                      <p class="fee__price">
-                        от 500 000
-                      </p>
-                      <p class="fee__sub">
-                        до 1 000 000 руб.
-                      </p>
-                    </div>
-                  </div>
-                  <div class="content__col">
-                    <div class="included">
-                      <h4 class="included__title">
-                        В пакет входит
-                      </h4>
-                      <ul class="included__list">
-                        <li>
-                          <b> 1 — </b> Работа под известным брендом
-                        </li>
-                        <li>
-                          <b> 2 — </b> Предоставление сайта, интернет-магазина и 1С
-                        </li>
-                        <li>
-                          <b> 3 — </b> Полное пошаговое сопровождение с момента подписания договора до открытия вашего
-                          собственного бутика спортивного питания Muscool
-                        </li>
-                        <li>
-                          <b> 4 — </b> Обучение персонала магазина и предоставления необходимых инструментов для
-                          быстрого развития
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="content__img">
-                  <img src="img/1.png" alt="Изображение пакета сотрудничесва с компанией">
-                </div>
-              </div>
-              <div class="content__footer">
-                <div class="content__footer-fee fee">
-                  <p class="fee__sup">
-                    Прибыль в месяц
-                  </p>
-                  <p class="fee__price">
-                    от 150 000
-                  </p>
-                </div>
-                <div class="content__footer-fee fee">
-                  <p class="fee__sup">
-                    Оккупаемость
-                  </p>
-                  <p class="fee__price">
-                    от 6 до 12 месяцев
-                  </p>
-                </div>
-                <button data-target="simpleModal_6" data-toggle="modal" class="content__footer-btn btn"
-                  value="Минимальный пакет">
-                  Выбрать этот пакет
-                </button>
-              </div>
             </div>
           </div>
-          <div class="tabs__content" data-tabs-target="medium">
-            <div class="content">
-              <div class="content__body">
-                <div class="content__text">
-                  <div class="content__col">
-                    <div class="content__fee fee">
-                      <p class="fee__sup">
-                        Стоимость франшизы
-                      </p>
-                      <p class="fee__price rub">
-                        300 000
-                      </p>
+        </div>
+        <div class="swiper-container formats__slider-bottom">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper formats__slider-bottom-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide formats__slider-bottom-slide">
+              <div class="content">
+                <div class="content__body">
+                  <div class="content__text">
+                    <div class="content__col">
+                      <div class="content__fee fee">
+                        <p class="fee__sup">
+                          Стоимость франшизы
+                        </p>
+                        <p class="fee__price rub">
+                          250 000
+                        </p>
+                      </div>
+                      <div class="content__fee fee">
+                        <p class="fee__sup">
+                          Ремонт
+                        </p>
+                        <p class="fee__price rub">
+                          до 300 000
+                        </p>
+                      </div>
+                      <div class="content__fee fee">
+                        <p class="fee__sup">
+                          Товарное наполнение
+                        </p>
+                        <p class="fee__price">
+                          от 500 000
+                        </p>
+                        <p class="fee__sub">
+                          до 1 000 000 руб.
+                        </p>
+                      </div>
                     </div>
-                    <div class="content__fee fee">
-                      <p class="fee__sup">
-                        Ремонт
-                      </p>
-                      <p class="fee__price rub">
-                        до 500 000
-                      </p>
-                    </div>
-                    <div class="content__fee fee">
-                      <p class="fee__sup">
-                        Товарное наполнение
-                      </p>
-                      <p class="fee__price">
-                        от 1 000 000
-                      </p>
-                      <p class="fee__sub">
-                        до 1 500 000 руб.
-                      </p>
+                    <div class="content__col">
+                      <div class="included">
+                        <h4 class="included__title">
+                          В пакет входит
+                        </h4>
+                        <ul class="included__list">
+                          <li>
+                            <b> 1 — </b> Работа под известным брендом
+                          </li>
+                          <li>
+                            <b> 2 — </b> Предоставление сайта, интернет-магазина и 1С
+                          </li>
+                          <li>
+                            <b> 3 — </b> Полное пошаговое сопровождение с момента подписания договора до открытия вашего
+                            собственного бутика спортивного питания Muscool
+                          </li>
+                          <li>
+                            <b> 4 — </b> Обучение персонала магазина и предоставления необходимых инструментов для
+                            быстрого развития
+                          </li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
-                  <div class="content__col">
-                    <div class="included">
-                      <h4 class="included__title">
-                        В пакет входит
-                      </h4>
-                      <ul class="included__list">
-                        <li>
-                          <b> 1 — </b> Работа под известным брендом
-                        </li>
-                        <li>
-                          <b> 2 — </b> Предоставление сайта, интернет-магазина и 1С
-                        </li>
-                        <li>
-                          <b> 3 — </b> Полное пошаговое сопровождение с момента подписания договора до открытия вашего
-                          собственного бутика спортивного питания Muscool
-                        </li>
-                        <li>
-                          <b> 4 — </b> Обучение персонала магазина и предоставления необходимых инструментов для
-                          быстрого развития
-                        </li>
-                      </ul>
-                    </div>
+                  <div class="content__img">
+                    <img src="img/1.png" alt="Изображение пакета сотрудничесва с компанией">
                   </div>
                 </div>
-                <div class="content__img">
-                  <img src="img/2.png" alt="Изображение пакета сотрудничесва с компанией">
+                <div class="content__footer">
+                  <div class="content__footer-fee fee">
+                    <p class="fee__sup">
+                      Прибыль в месяц
+                    </p>
+                    <p class="fee__price">
+                      от 150 000
+                    </p>
+                  </div>
+                  <div class="content__footer-fee fee">
+                    <p class="fee__sup">
+                      Оккупаемость
+                    </p>
+                    <p class="fee__price">
+                      от 6 до 12 месяцев
+                    </p>
+                  </div>
+                  <button data-target="simpleModal_6" data-toggle="modal" class="content__footer-btn btn"
+                    value="Минимальный пакет">
+                    Выбрать этот пакет
+                  </button>
                 </div>
-              </div>
-              <div class="content__footer">
-                <div class="content__footer-fee fee">
-                  <p class="fee__sup">
-                    Прибыль в месяц
-                  </p>
-                  <p class="fee__price">
-                    от 250 000
-                  </p>
-                </div>
-                <div class="content__footer-fee fee">
-                  <p class="fee__sup">
-                    Оккупаемость
-                  </p>
-                  <p class="fee__price">
-                    от 6 до 12 месяцев
-                  </p>
-                </div>
-                <button class="content__footer-btn btn" data-target="simpleModal_6" data-toggle="modal"
-                  value="Медиум пакет">
-                  Выбрать этот пакет
-                </button>
               </div>
             </div>
-          </div>
-          <div class="tabs__content" data-tabs-target="large">
-            <div class="content">
-              <div class="content__body">
-                <div class="content__text">
-                  <div class="content__col">
-                    <div class="content__fee fee">
-                      <p class="fee__sup">
-                        Стоимость франшизы
-                      </p>
-                      <p class="fee__price rub">
-                        350 000
-                      </p>
+            <div class="swiper-slide formats__slider-bottom-slide">
+              <div class="content">
+                <div class="content__body">
+                  <div class="content__text">
+                    <div class="content__col">
+                      <div class="content__fee fee">
+                        <p class="fee__sup">
+                          Стоимость франшизы
+                        </p>
+                        <p class="fee__price rub">
+                          300 000
+                        </p>
+                      </div>
+                      <div class="content__fee fee">
+                        <p class="fee__sup">
+                          Ремонт
+                        </p>
+                        <p class="fee__price rub">
+                          до 500 000
+                        </p>
+                      </div>
+                      <div class="content__fee fee">
+                        <p class="fee__sup">
+                          Товарное наполнение
+                        </p>
+                        <p class="fee__price">
+                          от 1 000 000
+                        </p>
+                        <p class="fee__sub">
+                          до 1 500 000 руб.
+                        </p>
+                      </div>
                     </div>
-                    <div class="content__fee fee">
-                      <p class="fee__sup">
-                        Ремонт
-                      </p>
-                      <p class="fee__price rub">
-                        до 700 000
-                      </p>
-                    </div>
-                    <div class="content__fee fee">
-                      <p class="fee__sup">
-                        Товарное наполнение
-                      </p>
-                      <p class="fee__price">
-                        от 1 500 000
-                      </p>
-                      <p class="fee__sub">
-                        до 2 500 000 руб.
-                      </p>
+                    <div class="content__col">
+                      <div class="included">
+                        <h4 class="included__title">
+                          В пакет входит
+                        </h4>
+                        <ul class="included__list">
+                          <li>
+                            <b> 1 — </b> Работа под известным брендом
+                          </li>
+                          <li>
+                            <b> 2 — </b> Предоставление сайта, интернет-магазина и 1С
+                          </li>
+                          <li>
+                            <b> 3 — </b> Полное пошаговое сопровождение с момента подписания договора до открытия вашего
+                            собственного бутика спортивного питания Muscool
+                          </li>
+                          <li>
+                            <b> 4 — </b> Обучение персонала магазина и предоставления необходимых инструментов для
+                            быстрого развития
+                          </li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
-                  <div class="content__col">
-                    <div class="included">
-                      <h4 class="included__title">
-                        В пакет входит
-                      </h4>
-                      <ul class="included__list">
-                        <li>
-                          <b> 1 — </b> Работа с известным брендом
-                        </li>
-                        <li>
-                          <b> 2 — </b> Предоставление сайта, интернет-магазина и 1С
-                        </li>
-                        <li>
-                          <b> 3 — </b> Полное пошаговое сопровождение с момента подписания договорадо открытия вашего
-                          собственного бутика спортивного питания Muscool
-                        </li>
-                        <li>
-                          <b> 4 — </b> Обучение персонала магазинаи предоставления необходимых инструментов для быстрого
-                          развития
-                        </li>
-                      </ul>
-                    </div>
+                  <div class="content__img">
+                    <img src="img/2.png" alt="Изображение пакета сотрудничесва с компанией">
                   </div>
                 </div>
-                <div class="content__img">
-                  <img src="img/3.png" alt="Изображение пакета сотрудничесва с компанией">
+                <div class="content__footer">
+                  <div class="content__footer-fee fee">
+                    <p class="fee__sup">
+                      Прибыль в месяц
+                    </p>
+                    <p class="fee__price">
+                      от 250 000
+                    </p>
+                  </div>
+                  <div class="content__footer-fee fee">
+                    <p class="fee__sup">
+                      Оккупаемость
+                    </p>
+                    <p class="fee__price">
+                      от 6 до 12 месяцев
+                    </p>
+                  </div>
+                  <button class="content__footer-btn btn" data-target="simpleModal_6" data-toggle="modal"
+                    value="Медиум пакет">
+                    Выбрать этот пакет
+                  </button>
                 </div>
               </div>
-              <div class="content__footer">
-                <div class="content__footer-fee fee">
-                  <p class="fee__sup">
-                    Прибыль в месяц
-                  </p>
-                  <p class="fee__price">
-                    от 350 000
-                  </p>
+            </div>
+            <div class="swiper-slide formats__slider-bottom-slide">
+              <div class="content">
+                <div class="content__body">
+                  <div class="content__text">
+                    <div class="content__col">
+                      <div class="content__fee fee">
+                        <p class="fee__sup">
+                          Стоимость франшизы
+                        </p>
+                        <p class="fee__price rub">
+                          350 000
+                        </p>
+                      </div>
+                      <div class="content__fee fee">
+                        <p class="fee__sup">
+                          Ремонт
+                        </p>
+                        <p class="fee__price rub">
+                          до 700 000
+                        </p>
+                      </div>
+                      <div class="content__fee fee">
+                        <p class="fee__sup">
+                          Товарное наполнение
+                        </p>
+                        <p class="fee__price">
+                          от 1 500 000
+                        </p>
+                        <p class="fee__sub">
+                          до 2 500 000 руб.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="content__col">
+                      <div class="included">
+                        <h4 class="included__title">
+                          В пакет входит
+                        </h4>
+                        <ul class="included__list">
+                          <li>
+                            <b> 1 — </b> Работа с известным брендом
+                          </li>
+                          <li>
+                            <b> 2 — </b> Предоставление сайта, интернет-магазина и 1С
+                          </li>
+                          <li>
+                            <b> 3 — </b> Полное пошаговое сопровождение с момента подписания договорадо открытия вашего
+                            собственного бутика спортивного питания Muscool
+                          </li>
+                          <li>
+                            <b> 4 — </b> Обучение персонала магазинаи предоставления необходимых инструментов для
+                            быстрого
+                            развития
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="content__img">
+                    <img src="img/3.png" alt="Изображение пакета сотрудничесва с компанией">
+                  </div>
                 </div>
-                <div class="content__footer-fee fee">
-                  <p class="fee__sup">
-                    Оккупаемость
-                  </p>
-                  <p class="fee__price">
-                    от 6 до 12 месяцев
-                  </p>
+                <div class="content__footer">
+                  <div class="content__footer-fee fee">
+                    <p class="fee__sup">
+                      Прибыль в месяц
+                    </p>
+                    <p class="fee__price">
+                      от 350 000
+                    </p>
+                  </div>
+                  <div class="content__footer-fee fee">
+                    <p class="fee__sup">
+                      Оккупаемость
+                    </p>
+                    <p class="fee__price">
+                      от 6 до 12 месяцев
+                    </p>
+                  </div>
+                  <button class="content__footer-btn btn" data-target="simpleModal_6" data-toggle="modal"
+                    value="Максимальный пакет">
+                    Выбрать этот пакет
+                  </button>
                 </div>
-                <button class="content__footer-btn btn" data-target="simpleModal_6" data-toggle="modal"
-                  value="Максимальный пакет">
-                  Выбрать этот пакет
-                </button>
               </div>
             </div>
           </div>
         </div>
-      </div>
     </section>
     <section class="feedback page-section">
       <div class="container feebdack__inner">
