@@ -139,8 +139,9 @@ input {
 }
 
 .btn {
-  display: inline-grid;
-  place-items: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 16px;
   padding: 1em;
   box-shadow: 0 8px 7px rgba(0, 0, 0, 0.4);
@@ -149,6 +150,7 @@ input {
   background-image: linear-gradient(180deg, #FFC53F 0%, #D9AF1C 100%);
   transition: background-image 0.7s ease-in-out;
   cursor: pointer;
+
 
   &:hover {
     background-image: linear-gradient(180deg, #DE9B00 0%, #D9AF1C 100%);

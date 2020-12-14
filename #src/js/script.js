@@ -110,13 +110,13 @@
      }
    }
    if ((target.hasAttribute('data-dismiss') && target.getAttribute('data-dismiss') == 'modal') || target.classList.contains('modal')) {
+     e.preventDefault();
      var modal = document.querySelector('[class="modal open"]');
      modal.classList.remove('open');
      body.classList.remove('locked');
      header.classList.remove('blur');
      main.classList.remove('blur');
      franchiseTypeFormInput.setAttribute('value', 'Пользователь не указал значение');
-     e.preventDefault();
    }
  }, false);
 
@@ -161,6 +161,17 @@
      required: true
    }
  }, '.thanks-popup', 'send goal');
+
+ //  document.querySelectorAll('.form__btn').forEach((element) => {
+ //    element.addEventListener('click', function (e) {
+ //      e.preventDefault();
+ //      validateForms('.form', {
+ //        tel: {
+ //          required: true
+ //        }
+ //      }, '.thanks-popup', 'send goal');
+ //    });
+ //  });
 
  // button info into the form
 
