@@ -307,7 +307,8 @@
                     от 6 до 12 месяцев
                   </p>
                 </div>
-                <button data-target="simpleModal_6" data-toggle="modal" class="content__footer-btn btn">
+                <button data-target="simpleModal_6" data-toggle="modal" class="content__footer-btn btn"
+                  value="Минимальный пакет">
                   Выбрать этот пакет
                 </button>
               </div>
@@ -391,7 +392,8 @@
                     от 6 до 12 месяцев
                   </p>
                 </div>
-                <button class="content__footer-btn btn" data-target="simpleModal_6" data-toggle="modal">
+                <button class="content__footer-btn btn" data-target="simpleModal_6" data-toggle="modal"
+                  value="Медиум пакет">
                   Выбрать этот пакет
                 </button>
               </div>
@@ -475,7 +477,8 @@
                     от 6 до 12 месяцев
                   </p>
                 </div>
-                <button class="content__footer-btn btn" data-target="simpleModal_6" data-toggle="modal">
+                <button class="content__footer-btn btn" data-target="simpleModal_6" data-toggle="modal"
+                  value="Максимальный пакет">
                   Выбрать этот пакет
                 </button>
               </div>
@@ -879,6 +882,9 @@
       <form action="#" class="form modal-form feedback__form">
         <input type="hidden" name="admin_email[]" value="info@muscoolfranchise.com">
         <input type="hidden" name="form__subject" value="Письмо с сайта">
+        <label type="hidden" class="form__field">
+          <input type="hidden" type="text" placeholder="Ваше имя" name="franchise" class="franchise">
+        </label>
         <label class="form__field">
           <input type="text" placeholder="Ваше имя" name="name" data-validate-field="name">
         </label>

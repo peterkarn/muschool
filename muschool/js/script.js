@@ -76,7 +76,6 @@
 
  adaptiveHeight();
 
-
  document.querySelectorAll('.accordion-item__trigger').forEach((item) =>
    item.addEventListener('click', () => {
      const parent = item.parentNode;
@@ -88,8 +87,9 @@
        parent.classList.add('accordion-item_active');
      }
    })
- )
+ );
 
+ // modals
  document.addEventListener('click', function (e) {
    e = e || window.event;
    var target = e.target || e.srcElement;
@@ -115,6 +115,7 @@
      body.classList.remove('locked');
      header.classList.remove('blur');
      main.classList.remove('blur');
+     franchiseTypeFormInput.setAttribute('value', 'Пользователь не указал значение');
      e.preventDefault();
    }
  }, false);
@@ -160,3 +161,13 @@
      required: true
    }
  }, '.thanks-popup', 'send goal');
+
+ // button info into the form
+
+ const formButtonInfo = document.querySelectorAll('.content__footer-btn');
+ const franchiseTypeFormInput = document.querySelector('.franchise');
+ formButtonInfo.forEach((element) => {
+   element.addEventListener('click', function () {
+     franchiseTypeFormInput.setAttribute('value', this.getAttribute('value'));
+   });
+ });
