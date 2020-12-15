@@ -450,11 +450,6 @@ body {
   overflow-y: visible !important;
 }
 
-.main.blur {
-  -webkit-filter: blur(8px);
-          filter: blur(8px);
-}
-
 h1,
 h2,
 h3,
@@ -522,8 +517,18 @@ input {
 }
 
 .main {
-  overflow-x: hidden;
+  overflow: hidden;
   background-color: #111;
+  -webkit-transition: -webkit-filter 0.3s;
+  transition: -webkit-filter 0.3s;
+  -o-transition: filter 0.3s;
+  transition: filter 0.3s;
+  transition: filter 0.3s, -webkit-filter 0.3s;
+}
+
+.main.blur {
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
 }
 
 .actions {
@@ -945,6 +950,11 @@ input {
   background-size: 100%;
   background-repeat: no-repeat;
   background-color: #000;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  -o-transition: transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
 }
 
 .header__title {
@@ -971,11 +981,11 @@ input {
 }
 
 .header.blur {
-  -webkit-filter: blur(10px);
-          filter: blur(10px);
-  -webkit-transform: scale(1.03);
-      -ms-transform: scale(1.03);
-          transform: scale(1.03);
+  -webkit-filter: blur(3px);
+          filter: blur(3px);
+  -webkit-transform: scale(1.01);
+      -ms-transform: scale(1.01);
+          transform: scale(1.01);
 }
 
 .about {
@@ -1157,7 +1167,8 @@ input {
 
 .formats__slider-top-slide {
   opacity: 0.4;
-  cursor: pointer;
+  cursor: -webkit-grab;
+  cursor: grab;
 }
 
 .formats__slider-top-slide.swiper-slide-active {
@@ -1637,29 +1648,30 @@ input {
   color: #000;
 }
 
-.questions {
-  position: relative;
-  padding: 4% 0 5%;
-}
-
-.questions:after {
-  content: "";
+.presentation__overlay {
   position: absolute;
-  top: -180%;
+  bottom: -150%;
   width: 100%;
   height: 300%;
   background-image: url("../img/backgrounds/fog.png");
   background-position: center right;
   background-size: contain;
   background-repeat: no-repeat;
-  opacity: 0.5;
+  opacity: 0.3;
+}
+
+.questions {
+  position: relative;
+  padding: 4% 0 5%;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .questions__inner {
   position: relative;
+  overflow: hidden;
   margin: 0 auto;
   width: 100%;
-  min-height: 800px;
   max-width: 737px;
 }
 
@@ -1669,14 +1681,16 @@ input {
 }
 
 .page-bottom {
+  position: relative;
   background-image: url("../img/backgrounds/bg-bottom-page.png");
   background-position: 50% 80%;
   background-size: 70%;
   background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .accordion {
-  position: absolute;
+  position: relative;
   margin: 0 auto;
   width: 100%;
   max-width: 737px;
@@ -1987,10 +2001,6 @@ input {
     display: none;
   }
 
-  .header {
-    background-position: 50% 30%;
-  }
-
   .text-shops__link {
     max-width: 100%;
   }
@@ -2080,10 +2090,6 @@ input {
 }
 
 @media screen and (max-width: 1023px) {
-  .header {
-    background-position: 50% 50%;
-  }
-
   .about__body {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -2176,10 +2182,6 @@ input {
 
   .intro__media {
     background-size: 60%;
-  }
-
-  .header {
-    background-position: 50% 100%;
   }
 
   .about {
@@ -2407,7 +2409,7 @@ input {
 
 .webp .presentation:after{ background-image: url(../img/blsck-cans.webp); }
 
-.webp .questions:after{ background-image: url(../img/backgrounds/fog.webp); }
+.webp .presentation__overlay{ background-image: url(../img/backgrounds/fog.webp); }
 
 .webp .page-bottom{ background-image: url(../img/backgrounds/bg-bottom-page.webp); }
 

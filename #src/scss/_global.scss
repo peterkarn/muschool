@@ -22,10 +22,6 @@ body {
   overflow-y: visible !important;
 }
 
-.main.blur {
-  filter: blur(8px);
-}
-
 h1,
 h2,
 h3,
@@ -92,9 +88,15 @@ input {
 }
 
 .main {
-  overflow-x: hidden;
+  overflow: hidden;
   background-color: #111;
+  transition: filter 0.3s;
+
+  &.blur {
+    filter: blur(5px);
+  }
 }
+
 
 .actions {
   display: flex;
