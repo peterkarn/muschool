@@ -66,7 +66,7 @@
    },
  });
 
- var swiperFormatsTop = new Swiper('.formats__slider-top', {
+ var swiperFormatsTopMobile = new Swiper('.formats__slider-top_mobile', {
    spaceBetween: 0,
    centeredSlides: true,
    slidesPerView: 'auto',
@@ -74,7 +74,6 @@
    slideToClickedSlide: true,
    loop: false,
    loopedSlides: 1,
-   slidesPerView: 3,
    breakpoints: {
      320: {
        slidesPerView: 1.5,
@@ -83,21 +82,37 @@
        slidesPerView: 2.8,
        spaceBetween: 20
      },
-     1024: {
-       slidesPerView: 4.5,
-       spaceBetween: 20
-     }
    }
  });
+
+ var swiperFormatsTopDesktop = new Swiper('.formats__slider-top_desktop', {
+   centeredSlides: true,
+   slidesPerView: 'auto',
+   touchRatio: 1,
+   loop: false,
+   slidesPerView: 3,
+   loopedSlides: 0,
+   centeredSlides: false,
+   spaceBetween: 150,
+ });
+
  var swiperFormatsBottom = new Swiper('.formats__slider-bottom', {
    spaceBetween: 10,
    loop: false,
    loopedSlides: 1,
    slidesPerView: 1,
    touchRatio: 0,
+   thumbs: {
+     swiper: swiperFormatsTopDesktop
+   }
+
  });
- swiperFormatsTop.controller.control = swiperFormatsBottom;
- swiperFormatsBottom.controller.control = swiperFormatsTop;
+
+
+ swiperFormatsTopMobile.controller.control = swiperFormatsBottom;
+ swiperFormatsBottom.controller.control = swiperFormatsTopMobile;
+
+
 
  //accordion
 
