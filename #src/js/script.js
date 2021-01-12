@@ -4,9 +4,10 @@
  const swiperH = new Swiper('.swiper-container-h', {
    spaceBetween: 50,
    loop: true,
-   touchRatio: 0,
+   touchRatio: 0.5,
    navigation: {
-     nextEl: '.text-shops__btn',
+     nextEl: '.shops__horizontal-next',
+     prevEl: '.shops__horizontal-prev',
    }
  });
  const swiperV = new Swiper('.swiper-container-v', {
