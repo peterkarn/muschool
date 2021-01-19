@@ -209,9 +209,9 @@ input {
   animation: fade-in-top 0.8s both;
 }
 
-.maw50 {
+.maw90 {
   img {
-    max-width: 50%;
+    max-width: 90%;
   }
 }
 
@@ -249,6 +249,10 @@ input {
     margin-right: 1em;
     white-space: nowrap;
   }
+}
+
+.scale {
+  transform: scale(1.2) !important;
 }
 
 
