@@ -1335,10 +1335,13 @@ input {
       flex-basis: 50%;
 }
 
+.shops__vertical-slider .swiper-slide {
+  position: relative;
+}
+
 .shops__text {
-  margin-right: 30px;
-  margin-left: auto;
   text-align: left;
+  min-width: 40%;
 }
 
 .shops__sup {
@@ -1410,6 +1413,11 @@ input {
 .text-shops__links {
   margin-bottom: 40px;
   font-weight: 300;
+}
+
+.text-shops__links_blank {
+  border: 2px dashed #FFFFFF;
+  opacity: 0.1;
 }
 
 .text-shops__link {
@@ -2153,6 +2161,11 @@ input {
   .formats__slider-top-slide.swiper-slide-thumb-active {
     opacity: 1;
   }
+
+  .shops__vertical-slider .swiper-slide img {
+    display: block;
+    max-width: 500px;
+  }
 }
 
 @media screen and (min-width: 1441) {
@@ -2254,6 +2267,10 @@ input {
   }
 
   .formats__slider-top_desktop {
+    display: none;
+  }
+
+  .text-shops__links_blank {
     display: none;
   }
 
@@ -2367,6 +2384,7 @@ input {
 
   .text-shops__all .text-shops__body {
     display: block;
+    margin-left: -15px;
   }
 
   .text-shops__all .text-shops__links {
@@ -2385,8 +2403,8 @@ input {
 @media screen and (max-width: 920px) {
   .feedback {
     padding: 11% 0 30%;
-    background-image: url(../img/choco-mob.png);
-    background-position: 50% 190px;
+    background-image: url("../img/choco-mob.png");
+    background-position: 50% 150px;
   }
 }
 
@@ -2625,12 +2643,12 @@ input {
 
   .feedback {
     padding: 11% 0 80%;
-    background-position: -20% calc(125% + 2vw);
+    background-position: -20% calc(110% + 2vw);
     background-size: 138%;
   }
 
   .questions__caption {
-    text-align: right;
+    text-align: left;
   }
 }
 

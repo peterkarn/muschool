@@ -526,15 +526,29 @@
   &__vertical-slider {
     flex-basis: 50%;
 
+    .swiper-slide {
+      position: relative;
+
+      img {
+        @media screen and (min-width: $medium) {
+          display: block;
+          max-width: 500px;
+        }
+
+      }
+
+    }
+
     @media screen and (max-width: $medium - 1) {
       flex-basis: auto;
     }
   }
 
   &__text {
-    margin-right: 30px;
-    margin-left: auto;
+    // margin-right: 30px;
+    // margin-left: auto;
     text-align: left;
+    min-width: 40%;
 
     @media screen and (max-width: $medium - 1) {
       order: -1;
@@ -641,6 +655,15 @@
     font-weight: 300;
   }
 
+  &__links_blank {
+    border: 2px dashed #FFFFFF;
+    opacity: 0.1;
+
+    @media screen and (max-width: $medium) {
+      display: none;
+    }
+  }
+
   &__link {
     display: block;
     margin-bottom: 16px;
@@ -737,6 +760,7 @@
 
     @media screen and (max-width: $medium - 1) {
       display: block;
+      margin-left: -15px;
     }
   }
 
@@ -1026,8 +1050,8 @@
 
   @media screen and (max-width: 920px) {
     padding: 11% 0 30%;
-    background-image: url(../img/choco-mob.png);
-    background-position: 50% 190px;
+    background-image: url("../img/choco-mob.png");
+    background-position: 50% 150px;
   }
 
   @media screen and (max-width: $small) {
@@ -1038,7 +1062,7 @@
 
   @media screen and (max-width: $xsmall) {
     padding: 11% 0 80%;
-    background-position: -20% calc(125% + 2vw);
+    background-position: -20% calc(110% + 2vw);
     background-size: 138%;
   }
 
@@ -1225,7 +1249,7 @@
     text-align: center;
 
     @media screen and (max-width: $xsmall) {
-      text-align: right;
+      text-align: left;
     }
   }
 }
